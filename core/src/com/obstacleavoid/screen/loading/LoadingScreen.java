@@ -28,9 +28,7 @@ public class LoadingScreen extends ScreenAdapter {
 
     private float progress;
     private float waitTime = 0.75f;
-    private boolean
-
-            changeScreen;
+    private boolean changeScreen;
 
     private final ObstacleAvoidGame game;
     private final AssetManager assetManager;
@@ -54,8 +52,8 @@ public class LoadingScreen extends ScreenAdapter {
 
         assetManager.load(AssetDescriptors.FONT);
         assetManager.load(AssetDescriptors.GAME_PLAY);
-        assetManager.load(AssetDescriptors.UI);
         assetManager.load(AssetDescriptors.UI_SKIN);
+        assetManager.load(AssetDescriptors.HIT_SOUND);
     }
 
     @Override

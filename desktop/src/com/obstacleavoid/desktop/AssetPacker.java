@@ -19,10 +19,6 @@ public class AssetPacker {
                 ASSETS_PATH + "/gameplay",
                 "gameplay");
 
-        TexturePacker.process(RAW_ASSETS_PATH + "/ui",
-                ASSETS_PATH + "/ui",
-                "ui");
-
         TexturePacker.process(settings,
                 RAW_ASSETS_PATH + "/skin",
                 ASSETS_PATH + "/ui",

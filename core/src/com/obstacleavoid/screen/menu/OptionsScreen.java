@@ -44,13 +44,13 @@ public class OptionsScreen extends MenuScreenBase {
 
         // label
         Label label = new Label("DIFFICULTY", uiSkin);
-        easy = new CheckBox(DifficultyLevel.EASY.name(), uiSkin);
-        medium = new CheckBox(DifficultyLevel.MEDIUM.name(), uiSkin);
-        hard = new CheckBox(DifficultyLevel.HARD.name(), uiSkin);
+        easy = checkBox(DifficultyLevel.EASY.name(), uiSkin);
+        medium = checkBox(DifficultyLevel.MEDIUM.name(), uiSkin);
+        hard = checkBox(DifficultyLevel.HARD.name(), uiSkin);
 
         checkBoxGroup = new ButtonGroup<CheckBox>(easy, medium, hard);
 
-        DifficultyLevel difficultyLevel = GameManager.INSTANCE.getDifficultyLevel();
+        final DifficultyLevel difficultyLevel = GameManager.INSTANCE.getDifficultyLevel();
         checkBoxGroup.setChecked(difficultyLevel.name());
 
         TextButton backButton = new TextButton("BACK", uiSkin);
@@ -112,5 +112,12 @@ public class OptionsScreen extends MenuScreenBase {
             log.debug("hard");
             GameManager.INSTANCE.updateDifficulty(DifficultyLevel.HARD);
         }
+    }
+
+    private static CheckBox checkBox(String text, Skin skin) {
+        CheckBox checkBox = new CheckBox(text, skin);
+        checkBox.left().pad(8);
+        checkBox.getLabelCell().pad(8);
+        return checkBox;
     }
 }

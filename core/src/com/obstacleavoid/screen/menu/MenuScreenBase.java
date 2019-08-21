@@ -22,6 +22,7 @@ public abstract class MenuScreenBase extends ScreenAdapter {
     private Viewport viewport;
     private Stage stage;
 
+
     public MenuScreenBase(ObstacleAvoidGame game) {
         this.game = game;
         assetManager = game.getAssetManager();
@@ -44,7 +45,8 @@ public abstract class MenuScreenBase extends ScreenAdapter {
     public void show() {
         viewport = new FitViewport(GameConfig.HUD_WIDTH, GameConfig.HUD_HEIGHT);
         stage = new Stage(viewport, game.getBatch());
-
+        // show debug outlines
+        // stage.setDebugAll(true);
         Gdx.input.setInputProcessor(stage);
 
         stage.addActor(createUi());

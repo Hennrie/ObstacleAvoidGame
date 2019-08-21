@@ -3,7 +3,7 @@ package com.obstacleavoid.assets;
 public class RegionNames {
 
 
-    // == gampeply.atlas ==
+    // == gampeplay.atlas ==
 
     public static final String BACKGROUND = "background";
     public static final String OBSTACLE = "obstacle";
@@ -21,9 +21,10 @@ public class RegionNames {
     public static final String MEDIUM = "medium";
     public static final String OPTIONS = "options";
     public static final String OPTIONS_PRESSED = "optionsPressed";
-    public static final String PANEL = "panel";
     public static final String PLAY= "play";
     public static final String PLAY_PRESSED= "playPressed";
+    public static final String PANEL = "panel";
+
 
 
 
